@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\MAL\\Documents\\GitHub\\HastaneRandevuSistemi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8DD6AB68-3C2D-4AEC-A03C-4058CE630673}|HastaneRandevuSistemi.csproj|c:\\users\\mal\\documents\\github\\hastanerandevusistemi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{8DD6AB68-3C2D-4AEC-A03C-4058CE630673}|HastaneRandevuSistemi.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8DD6AB68-3C2D-4AEC-A03C-4058CE630673}|HastaneRandevuSistemi.csproj|c:\\users\\mal\\documents\\github\\hastanerandevusistemi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8DD6AB68-3C2D-4AEC-A03C-4058CE630673}|HastaneRandevuSistemi.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\MAL\\Documents\\GitHub\\HastaneRandevuSistemi\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\MAL\\Documents\\GitHub\\HastaneRandevuSistemi\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-28T18:11:41.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\MAL\\Documents\\GitHub\\HastaneRandevuSistemi\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

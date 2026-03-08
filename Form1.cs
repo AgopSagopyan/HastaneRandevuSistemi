@@ -1,11 +1,39 @@
 namespace HastaneRandevuSistemi
 {
     using System.Text.RegularExpressions;
+
+    using MySql.Data.MySqlClient;
+
     public partial class Form1 : Form
     {
+
+        private void ConnectToDatabase()
+        {
+            string connString = "Server=localhost; Database=deneme; Uid=root; Pwd=kerem4567;";
+
+            using (MySqlConnection connection = new MySqlConnection(connString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SHOW DATABASES;";
+
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    var result = cmd.ExecuteScalar();
+
+                    MessageBox.Show($"Connection Successful! Total users: {result}");
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
+            ConnectToDatabase();
         }
 
         private void label1_Click(object sender, EventArgs e)

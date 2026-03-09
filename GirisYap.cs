@@ -33,12 +33,20 @@ namespace HastaneRandevuSistemi
             string user = textBox1.Text;
             string pass = textBox2.Text;
 
-            if (DatabaseHelper.AuthenticateUser(user, pass)) { 
-                
+            if (DatabaseHelper.AuthenticateUser(user, pass))
+            {
+                MessageBox.Show("Login Successful!");
+
+                AdminPaneli adminPage = new AdminPaneli();
+                adminPage.Show();
+
+            }
+            else {
+                MessageBox.Show("Error");
             }
 
 
-            string sql = "select * from users";
+                string sql = "select * from users";
 
             DataTable data = DatabaseHelper.GetDataTable(sql);
 
@@ -51,6 +59,8 @@ namespace HastaneRandevuSistemi
             else {
                 MessageBox.Show("Could Not Load Data");
             }
+
+            
 
             /*
             sql = "INSERT INTO users (username, password) VALUES (@username, @password)";

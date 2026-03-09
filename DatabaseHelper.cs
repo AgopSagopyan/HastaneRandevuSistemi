@@ -73,7 +73,7 @@ namespace HastaneRandevuSistemi
 
         public static bool AuthenticateUser(string username, string password) {
 
-            string sql = "SELECT * COUNT(*) FROM users WHERE username = @username AND password = @password";
+            string sql = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
 
             MySqlParameter[] parameters = {
                 new MySqlParameter("username", username),

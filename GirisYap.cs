@@ -37,14 +37,24 @@ namespace HastaneRandevuSistemi
             {
                 MessageBox.Show("Login Successful!");
 
+
+
                 AdminPaneli adminPage = new AdminPaneli();
-                adminPage.Show();
+
+
+               
+
+                if (this.Parent is Panel containerPanel)
+                {
+                    containerPanel.Controls.Clear(); // Remove Login Control
+                    adminPage.Dock = DockStyle.Fill;   // Make it fill the panel
+                    containerPanel.Controls.Add(adminPage); // Add Admin Control
+                }
 
             }
             else {
                 MessageBox.Show("Error");
             }
-
 
                 string sql = "select * from users";
 

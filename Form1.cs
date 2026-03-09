@@ -113,7 +113,7 @@ namespace HastaneRandevuSistemi
 
             var result = DatabaseHelper.TestConnection();
 
-            MessageBox.Show(result.ToString());
+            //MessageBox.Show(result.ToString());
         }
 
     }

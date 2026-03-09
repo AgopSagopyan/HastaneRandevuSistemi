@@ -1,42 +1,28 @@
 namespace HastaneRandevuSistemi
 {
-    using System.Text.RegularExpressions;
-
-    using MySql.Data.MySqlClient;
-
     public partial class Form1 : Form
     {
-
-        private void ConnectToDatabase()
-        {
-            string connString = "Server=localhost; Database=deneme; Uid=root; Pwd=kerem4567;";
-
-            using (MySqlConnection connection = new MySqlConnection(connString))
-            {
-                try
-                {
-                    connection.Open();
-                    string query = "SHOW DATABASES;";
-
-                    MySqlCommand cmd = new MySqlCommand(query, connection);
-                    var result = cmd.ExecuteScalar();
-
-                    MessageBox.Show($"Connection Successful! Total users: {result}");
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-        }
-
         public Form1()
         {
             InitializeComponent();
-            ConnectToDatabase();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
@@ -46,33 +32,77 @@ namespace HastaneRandevuSistemi
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click_1(object sender, EventArgs e)
         {
-            string kullaniciAdi = textBox1.Text;
-            string sifre = textBox2.Text;
 
-            // Kullanıcı adında rakam kontrolü
-            if (Regex.IsMatch(kullaniciAdi, "[0-9]"))
-            {
-                MessageBox.Show("Kullanıcı adında rakam kullanılamaz!");
-                return;
-            }
+        }
 
-            // Şifrede büyük harf kontrolü
-            if (!Regex.IsMatch(sifre, "[A-Z]"))
-            {
-                MessageBox.Show("Şifre en az 1 büyük harf içermelidir!");
-                return;
-            }
+        private void label4_Click(object sender, EventArgs e)
+        {
 
-            // Şifrede özel karakter kontrolü
-            if (!Regex.IsMatch(sifre, "[!@#$%^&*]"))
-            {
-                MessageBox.Show("Şifre en az 1 özel karakter içermelidir!");
-                return;
-            }
+        }
 
-            MessageBox.Show("Giriş başarılı");
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(textBox1.Text);
+            textBox1.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listBox1.Items.Add("Alican K.: Doktor Kemal Bey çok ilgiliydi.");
+            listBox1.Items.Add("Ayten S.: Randevu sistemi çok kolay.");
+            listBox1.Items.Add("Naciye M.: Ayın Doktoru kesinlikle Hamit Bey.");
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
 
         }
     }

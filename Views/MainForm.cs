@@ -1,11 +1,15 @@
-namespace HastaneRandevuSistemi
+namespace HastaneRandevuSistemi.Views
 {
     using System.Text.RegularExpressions;
-
+    using HastaneRandevuSistemi.Data;
     using MySql.Data.MySqlClient;
 
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
+
+        private ExecuteQuery _executeQuery;
+
+
 
         private void ConnectToDatabase()
         {
@@ -35,8 +39,10 @@ namespace HastaneRandevuSistemi
             }
         }
 
-        public Form1()
+        public MainForm()
         {
+            _executeQuery = new ExecuteQuery();
+
             InitializeComponent();
             ConnectToDatabase();
         }
@@ -111,7 +117,6 @@ namespace HastaneRandevuSistemi
         {
             // int result = DatabaseHelper.ExecuteQuery("SHOW DATABASES;");
 
-            var result = DatabaseHelper.TestConnection();
 
             //MessageBox.Show(result.ToString());
         }

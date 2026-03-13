@@ -77,12 +77,12 @@
             comboBox1 = new ComboBox();
             label16 = new Label();
             panel12 = new Panel();
-            label17 = new Label();
             panel13 = new Panel();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
             label21 = new Label();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel6.SuspendLayout();
@@ -457,6 +457,7 @@
             button6.TabIndex = 2;
             button6.Text = "Ana Sayfa";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // panel2
             // 
@@ -626,17 +627,6 @@
             panel12.Size = new Size(545, 212);
             panel12.TabIndex = 220;
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 15F);
-            label17.ForeColor = Color.FromArgb(192, 0, 0);
-            label17.Location = new Point(7, 9);
-            label17.Name = "label17";
-            label17.Size = new Size(187, 28);
-            label17.TabIndex = 0;
-            label17.Text = "Hastane Duyuruları :";
-            // 
             // panel13
             // 
             panel13.Controls.Add(label21);
@@ -648,15 +638,24 @@
             panel13.Size = new Size(535, 151);
             panel13.TabIndex = 1;
             // 
-            // label18
+            // label21
             // 
-            label18.AutoSize = true;
-            label18.ForeColor = Color.FromArgb(192, 0, 0);
-            label18.Location = new Point(3, 9);
-            label18.Name = "label18";
-            label18.Size = new Size(184, 15);
-            label18.TabIndex = 0;
-            label18.Text = "Yeni Doktorumuz Göreve Başladı :\r\n";
+            label21.AutoSize = true;
+            label21.Location = new Point(3, 105);
+            label21.Name = "label21";
+            label21.Size = new Size(494, 15);
+            label21.TabIndex = 3;
+            label21.Text = "Grip aşısı uygulaması hastanemizde başlamıştır. Detaylı bilgi için danışmaya başvurabilirsiniz.";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.ForeColor = Color.FromArgb(192, 0, 0);
+            label20.Location = new Point(3, 79);
+            label20.Name = "label20";
+            label20.Size = new Size(167, 15);
+            label20.TabIndex = 2;
+            label20.Text = "Grip Aşısı Uygulaması Başladı :\r\n";
             // 
             // label19
             // 
@@ -669,24 +668,26 @@
             label19.Text = "Kardiyoloji bölümüne Dr. hamit Sözer katılmıştır. Randevu sistemi üzerinden randevu alabilirsiniz.\r\n\r\n2️⃣";
             label19.Click += label19_Click;
             // 
-            // label20
+            // label18
             // 
-            label20.AutoSize = true;
-            label20.ForeColor = Color.FromArgb(192, 0, 0);
-            label20.Location = new Point(3, 79);
-            label20.Name = "label20";
-            label20.Size = new Size(167, 15);
-            label20.TabIndex = 2;
-            label20.Text = "Grip Aşısı Uygulaması Başladı :\r\n";
+            label18.AutoSize = true;
+            label18.ForeColor = Color.FromArgb(192, 0, 0);
+            label18.Location = new Point(3, 9);
+            label18.Name = "label18";
+            label18.Size = new Size(184, 15);
+            label18.TabIndex = 0;
+            label18.Text = "Yeni Doktorumuz Göreve Başladı :\r\n";
             // 
-            // label21
+            // label17
             // 
-            label21.AutoSize = true;
-            label21.Location = new Point(3, 105);
-            label21.Name = "label21";
-            label21.Size = new Size(494, 15);
-            label21.TabIndex = 3;
-            label21.Text = "Grip aşısı uygulaması hastanemizde başlamıştır. Detaylı bilgi için danışmaya başvurabilirsiniz.";
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 15F);
+            label17.ForeColor = Color.FromArgb(192, 0, 0);
+            label17.Location = new Point(7, 9);
+            label17.Name = "label17";
+            label17.Size = new Size(187, 28);
+            label17.TabIndex = 0;
+            label17.Text = "Hastane Duyuruları :";
             // 
             // AnaSayfa
             // 

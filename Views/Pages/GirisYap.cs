@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HastaneRandevuSistemi.Controllers;
 using HastaneRandevuSistemi.Data;
+using HastaneRandevuSistemi.Views;
 using MySql.Data.MySqlClient;
 
 namespace HastaneRandevuSistemi
@@ -41,6 +42,16 @@ namespace HastaneRandevuSistemi
 
             if (_loginController.Login(username, password)) {
                 MessageBox.Show("Login Successful!");
+
+
+                AnaSayfa anaSayfa = new AnaSayfa();
+
+                panel1.Controls.Clear();
+
+                panel1.Controls.Add(anaSayfa);
+
+
+                
             }
 
 

@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HastaneRandevuSistemi.Controllers;
 
 namespace HastaneRandevuSistemi
 {
     public partial class AnaSayfa : UserControl
     {
+        private readonly LoginController _loginController;
+
         public AnaSayfa()
         {
+            _loginController = new LoginController();
             InitializeComponent();
         }
 
@@ -33,6 +37,11 @@ namespace HastaneRandevuSistemi
         }
 
         private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

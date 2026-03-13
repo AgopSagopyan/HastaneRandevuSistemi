@@ -10,6 +10,7 @@ namespace HastaneRandevuSistemi.Controllers
     public class LoginController
     {
         private readonly UserRepository _userRepo;
+
         public LoginController() {
             _userRepo = new UserRepository();
         }

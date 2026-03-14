@@ -1,36 +1,78 @@
 namespace HastaneRandevuSistemi.Views
 {
     using System.Text.RegularExpressions;
+    using HastaneRandevuSistemi.Controllers;
     using HastaneRandevuSistemi.Data;
     using HastaneRandevuSistemi.Repositories;
     using HastaneRandevuSistemi.Services;
     using MySql.Data.MySqlClient;
+    using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
     public partial class MainForm : Form
     {
-        private MainRepository mainRepository;
+        private MainRepository _mainRepository;
+
+        private NavigationService _navigationService;
+
+        private Controller _controller;
+
 
         public MainForm()
         {
 
             InitializeComponent();
-            mainRepository = new MainRepository();
-
+            _mainRepository = new MainRepository();
+            _navigationService = new NavigationService(panel1);
+            _controller = new Controller(_navigationService, this, _mainRepository);
         }
 
 
-        public NavigationService Navigator { get; private set; }
 
-
-        public void ShowPage(UserControl page)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Navigator = new NavigationService(panel1);
 
-            panel1.Controls.Clear();
-            panel1.Controls.Add(page);
+
+            //AdminPaneli adminPanel = new AdminPaneli(this, _mainRepository, _controller);
+
+            //_controller.GoToAdminPage();
+
+            _controller.GoToLoginPage();
+
+            //_navigationService.Navigate(adminPanel);
+
+
         }
 
-       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            // int result = DatabaseHelper.ExecuteQuery("SHOW DATABASES;");
+
+
+            //MessageBox.Show(result.ToString());
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -44,38 +86,6 @@ namespace HastaneRandevuSistemi.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-        }
-
-       
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            LoginPage girisSayfasi = new LoginPage(this);
-
-            AdminPaneli adminPanel = new AdminPaneli(this, mainRepository);
-
-            panel1.Controls.Clear();
-
-            //panel1.Controls.Add(girisSayfasi);
-
-            panel1.Controls.Add(adminPanel);
-
-
-
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            // int result = DatabaseHelper.ExecuteQuery("SHOW DATABASES;");
-
-
-            //MessageBox.Show(result.ToString());
         }
 
     }

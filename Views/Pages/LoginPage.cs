@@ -1,4 +1,5 @@
 ﻿using System;
+using HastaneRandevuSistemi.Controllers;
 using HastaneRandevuSistemi.Models;
 using HastaneRandevuSistemi.Repositories;
 using HastaneRandevuSistemi.Views;
@@ -11,12 +12,16 @@ namespace HastaneRandevuSistemi
 
         private MainForm _mainForm;
 
+        private readonly Controller _controller;
 
-        public LoginPage(MainForm mainForm)
+
+        public LoginPage(MainForm mainForm, Controller controller)
         {
             InitializeComponent();
             _mainRepository = new MainRepository();
             _mainForm = mainForm;
+
+            _controller = controller;
         }
 
 
@@ -32,7 +37,11 @@ namespace HastaneRandevuSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<User> users = _mainRepository.GetAllUsers();
+
+            _controller.Login("kerem", "123");
+
+
+            /*List<User> users = _mainRepository.GetAllUsers();
 
             dataGridView1.DataSource = users;
 
@@ -43,13 +52,14 @@ namespace HastaneRandevuSistemi
                 MessageBox.Show("Login succesfull");
 
                 AnaSayfa mainPage = new AnaSayfa(_mainForm);
-                _mainForm.ShowPage(mainPage);
+// _mainForm.ShowPage(mainPage);
             }
             else
             {
                 MessageBox.Show("Unsucessful Login");
 
             }
+            */
 
 
         }

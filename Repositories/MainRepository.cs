@@ -41,6 +41,35 @@ namespace HastaneRandevuSistemi.Repositories
 
         }
 
+        public User Login(string username, string password) 
+        {
+            using (var conn = new MySqlConnection(_connectionString)) {
+                conn.Open();
+
+                string query = "SELECT id, username, password FROM users WHERE username=@username AND password=@password";
+                using (var cmd = new MySqlCommand(query, conn)) {
+
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    using (var reader = cmd.ExecuteReader()) { 
+                        if(reader.Read())
+                        {
+                            return new User
+                            {
+                                Id = reader.GetInt32("id"),
+                                Username = reader.GetString("username"),
+                                Password = reader.GetString("password"),
+
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
 
     }
 }

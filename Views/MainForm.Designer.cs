@@ -39,14 +39,16 @@ partial class MainForm
         panel1.TabIndex = 0;
         panel1.Paint += panel1_Paint;
         // 
-        // Form1
+        // MainForm
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(30, 39, 46);
         ClientSize = new Size(1264, 721);
         Controls.Add(panel1);
-        Name = "Form1";
+        MaximumSize = new Size(1280, 760);
+        MinimumSize = new Size(1280, 760);
+        Name = "MainForm";
         Text = "Form1";
         Load += Form1_Load;
         ResumeLayout(false);

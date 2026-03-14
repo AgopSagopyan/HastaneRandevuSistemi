@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HastaneRandevuSistemi.Repositories;
+using HastaneRandevuSistemi.Views;
 
 namespace HastaneRandevuSistemi
 {
     public partial class AnaSayfa : UserControl
     {
 
-        public AnaSayfa()
+        private MainForm _mainForm;
+
+        public AnaSayfa(MainForm mainForm)
         {
             InitializeComponent();
+            _mainForm = mainForm;
         }
 
         private void UserControl2_Load(object sender, EventArgs e)
@@ -41,6 +46,12 @@ namespace HastaneRandevuSistemi
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AdminPaneli adminPage = new AdminPaneli(_mainForm);
+            _mainForm.ShowPage(adminPage);
         }
     }
 }

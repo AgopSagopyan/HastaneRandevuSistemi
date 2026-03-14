@@ -327,13 +327,14 @@
             button4.BackColor = Color.FromArgb(52, 152, 219);
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.System;
-            button4.Location = new Point(1277, 22);
+            button4.Location = new Point(628, 181);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(148, 24);
             button4.TabIndex = 4;
             button4.Text = "Admin Girişi";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // panel3
             // 
@@ -493,7 +494,6 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button3);
-            panel1.Controls.Add(button4);
             panel1.Location = new Point(1, 2);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
@@ -704,6 +704,7 @@
             Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(panel3);
+            Controls.Add(button4);
             Controls.Add(panel1);
             Name = "AnaSayfa";
             Size = new Size(1458, 678);

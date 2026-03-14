@@ -7,6 +7,9 @@
     <Compile Update="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\Pages\AnaSayfa2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Pages\LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>

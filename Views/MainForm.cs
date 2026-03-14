@@ -97,7 +97,7 @@ namespace HastaneRandevuSistemi.Views
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GirisYap girisSayfasi = new GirisYap();
+            LoginPage girisSayfasi = new LoginPage();
 
             panel1.Controls.Clear();
 

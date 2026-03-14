@@ -10,6 +10,11 @@ namespace HastaneRandevuSistemi.Repositories
 {
     public class UserRepository
     {
+        public interface IUserRepository
+        {
+            User GetByUserName(string username);
+        }
+
         private readonly DatabaseConnection _connection;
 
         public UserRepository() { 

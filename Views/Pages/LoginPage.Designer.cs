@@ -1,6 +1,6 @@
 ﻿namespace HastaneRandevuSistemi
 {
-    partial class GirisYap
+    partial class LoginPage
     {
         /// <summary> 
         /// Required designer variable.

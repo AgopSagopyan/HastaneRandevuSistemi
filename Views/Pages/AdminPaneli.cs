@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HastaneRandevuSistemi.Controllers;
 using HastaneRandevuSistemi.Repositories;
 using HastaneRandevuSistemi.Views;
 using HastaneRandevuSistemi.Views.Pages.AdminTabs;
@@ -19,12 +20,14 @@ namespace HastaneRandevuSistemi
 
         private MainRepository _mainRepository;
 
-        public AdminPaneli(MainForm mainForm, MainRepository mainRepository)
+        private Controller _controller;
+
+        public AdminPaneli(MainForm mainForm, MainRepository mainRepository, Controller controller)
         {
             InitializeComponent();
+            _controller = controller;
             _mainForm = mainForm;
             _mainRepository = mainRepository;
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -56,6 +59,11 @@ namespace HastaneRandevuSistemi
         private void btnDoktorEkle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _controller.GoToMainPage();
         }
     }
 }

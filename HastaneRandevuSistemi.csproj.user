@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Views\IlacBigilerı.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Pages\AdminPaneli.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -22,11 +25,17 @@
     <Compile Update="Views\Pages\AnaSayfa2.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Pages\IlacBilgileri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Pages\LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Pages\AnaSayfa.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\Yorum.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 </Project>

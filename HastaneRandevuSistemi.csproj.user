@@ -13,6 +13,9 @@
     <Compile Update="Views\Pages\AdminPanelTabs\AdminPanelHastaTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Pages\AdminPanelTabs\AdminPanelRandevuTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Pages\AdminPanelTabs\AdminPanelUsersTab.cs">
       <SubType>UserControl</SubType>
     </Compile>

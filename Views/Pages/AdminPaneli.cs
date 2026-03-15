@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HastaneRandevuSistemi.Repositories;
 using HastaneRandevuSistemi.Views;
+using HastaneRandevuSistemi.Views.Pages.AdminTabs;
 
 namespace HastaneRandevuSistemi
 {
@@ -15,10 +17,14 @@ namespace HastaneRandevuSistemi
     {
         private MainForm _mainForm;
 
-        public AdminPaneli(MainForm mainForm)
+        private MainRepository _mainRepository;
+
+        public AdminPaneli(MainForm mainForm, MainRepository mainRepository)
         {
             InitializeComponent();
             _mainForm = mainForm;
+            _mainRepository = mainRepository;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -28,10 +34,26 @@ namespace HastaneRandevuSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            AdminPanelDoctorsTab adminPanelDoctorsTab = new AdminPanelDoctorsTab(_mainRepository);
 
+            panel3.Controls.Clear();
+            panel3.Controls.Add(adminPanelDoctorsTab);
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AdminPanelUsersTab adminUsersTab = new AdminPanelUsersTab(_mainRepository);
+
+            panel3.Controls.Clear();
+            panel3.Controls.Add(adminUsersTab);
+        }
+
+        private void btnDoktorEkle_Click(object sender, EventArgs e)
         {
 
         }

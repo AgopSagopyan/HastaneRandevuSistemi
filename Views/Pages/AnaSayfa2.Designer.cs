@@ -36,47 +36,47 @@
             button3 = new Button();
             pictureHastane = new PictureBox();
             panelRandevu = new Panel();
-            label2 = new Label();
-            label3 = new Label();
-            comboDoktor = new ComboBox();
-            label4 = new Label();
-            dateTarih = new DateTimePicker();
-            label5 = new Label();
-            comboSaat = new ComboBox();
             button4 = new Button();
+            comboSaat = new ComboBox();
+            label5 = new Label();
+            dateTarih = new DateTimePicker();
+            label4 = new Label();
+            comboDoktor = new ComboBox();
+            label3 = new Label();
+            label2 = new Label();
             label6 = new Label();
             panelDoktorlar = new Panel();
-            panel1 = new Panel();
-            pictureBox1 = new PictureBox();
-            label7 = new Label();
-            label8 = new Label();
-            button5 = new Button();
-            panel2 = new Panel();
-            button6 = new Button();
-            label9 = new Label();
-            label10 = new Label();
-            pictureBox2 = new PictureBox();
-            panel3 = new Panel();
-            button7 = new Button();
-            label11 = new Label();
-            label12 = new Label();
-            pictureBox3 = new PictureBox();
             panel4 = new Panel();
             button8 = new Button();
             label13 = new Label();
             label14 = new Label();
             pictureBox4 = new PictureBox();
+            panel3 = new Panel();
+            button7 = new Button();
+            label11 = new Label();
+            label12 = new Label();
+            pictureBox3 = new PictureBox();
+            panel2 = new Panel();
+            button6 = new Button();
+            label9 = new Label();
+            label10 = new Label();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            button5 = new Button();
+            label8 = new Label();
+            label7 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureHastane).BeginInit();
             panelRandevu.SuspendLayout();
             panelDoktorlar.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelUst
@@ -166,71 +166,6 @@
             panelRandevu.Size = new Size(560, 250);
             panelRandevu.TabIndex = 6;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(20, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(157, 25);
-            label2.TabIndex = 7;
-            label2.Text = "Hızlı Randevu Al";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(20, 70);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 15);
-            label3.TabIndex = 8;
-            label3.Text = "Doktor";
-            // 
-            // comboDoktor
-            // 
-            comboDoktor.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            comboDoktor.FormattingEnabled = true;
-            comboDoktor.Location = new Point(150, 65);
-            comboDoktor.Name = "comboDoktor";
-            comboDoktor.Size = new Size(250, 25);
-            comboDoktor.TabIndex = 9;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(20, 110);
-            label4.Name = "label4";
-            label4.Size = new Size(32, 15);
-            label4.TabIndex = 10;
-            label4.Text = "Tarih";
-            // 
-            // dateTarih
-            // 
-            dateTarih.Location = new Point(150, 105);
-            dateTarih.Name = "dateTarih";
-            dateTarih.Size = new Size(250, 23);
-            dateTarih.TabIndex = 11;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(20, 150);
-            label5.Name = "label5";
-            label5.Size = new Size(29, 15);
-            label5.TabIndex = 12;
-            label5.Text = "Saat";
-            // 
-            // comboSaat
-            // 
-            comboSaat.FormattingEnabled = true;
-            comboSaat.Location = new Point(150, 145);
-            comboSaat.Name = "comboSaat";
-            comboSaat.Size = new Size(250, 23);
-            comboSaat.TabIndex = 13;
-            // 
             // button4
             // 
             button4.BackColor = Color.FromArgb(0, 120, 215);
@@ -244,6 +179,71 @@
             button4.TabIndex = 14;
             button4.Text = "Randevu Oluştur";
             button4.UseVisualStyleBackColor = false;
+            // 
+            // comboSaat
+            // 
+            comboSaat.FormattingEnabled = true;
+            comboSaat.Location = new Point(150, 145);
+            comboSaat.Name = "comboSaat";
+            comboSaat.Size = new Size(250, 23);
+            comboSaat.TabIndex = 13;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(20, 150);
+            label5.Name = "label5";
+            label5.Size = new Size(29, 15);
+            label5.TabIndex = 12;
+            label5.Text = "Saat";
+            // 
+            // dateTarih
+            // 
+            dateTarih.Location = new Point(150, 105);
+            dateTarih.Name = "dateTarih";
+            dateTarih.Size = new Size(250, 23);
+            dateTarih.TabIndex = 11;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(20, 110);
+            label4.Name = "label4";
+            label4.Size = new Size(32, 15);
+            label4.TabIndex = 10;
+            label4.Text = "Tarih";
+            // 
+            // comboDoktor
+            // 
+            comboDoktor.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            comboDoktor.FormattingEnabled = true;
+            comboDoktor.Location = new Point(150, 65);
+            comboDoktor.Name = "comboDoktor";
+            comboDoktor.Size = new Size(250, 25);
+            comboDoktor.TabIndex = 9;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(20, 70);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Doktor";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(20, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(157, 25);
+            label2.TabIndex = 7;
+            label2.Text = "Hızlı Randevu Al";
             // 
             // label6
             // 
@@ -267,177 +267,6 @@
             panelDoktorlar.Name = "panelDoktorlar";
             panelDoktorlar.Size = new Size(1100, 200);
             panelDoktorlar.TabIndex = 8;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(50, 50, 50);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(30, 15);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 170);
-            panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(40, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(120, 90);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(35, 105);
-            label7.Name = "label7";
-            label7.Size = new Size(116, 15);
-            label7.TabIndex = 1;
-            label7.Text = "Dr.Davut Efe AYBEY";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.ForeColor = Color.LightGray;
-            label8.Location = new Point(60, 125);
-            label8.Name = "label8";
-            label8.Size = new Size(63, 15);
-            label8.TabIndex = 2;
-            label8.Text = "Kardiyoloji";
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(0, 120, 215);
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(50, 145);
-            button5.Name = "button5";
-            button5.Size = new Size(100, 25);
-            button5.TabIndex = 3;
-            button5.Text = "Randevu";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(50, 50, 50);
-            panel2.Controls.Add(button6);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Location = new Point(260, 15);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(200, 170);
-            panel2.TabIndex = 1;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(0, 120, 215);
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(50, 145);
-            button6.Name = "button6";
-            button6.Size = new Size(100, 25);
-            button6.TabIndex = 3;
-            button6.Text = "Randevu";
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.ForeColor = Color.LightGray;
-            label9.Location = new Point(60, 125);
-            label9.Name = "label9";
-            label9.Size = new Size(63, 15);
-            label9.TabIndex = 2;
-            label9.Text = "Kardiyoloji";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(35, 105);
-            label10.Name = "label10";
-            label10.Size = new Size(116, 15);
-            label10.TabIndex = 1;
-            label10.Text = "Dr.Davut Efe AYBEY";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(40, 10);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(120, 90);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(50, 50, 50);
-            panel3.Controls.Add(button7);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(label12);
-            panel3.Controls.Add(pictureBox3);
-            panel3.Location = new Point(490, 15);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(200, 170);
-            panel3.TabIndex = 2;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.FromArgb(0, 120, 215);
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(50, 145);
-            button7.Name = "button7";
-            button7.Size = new Size(100, 25);
-            button7.TabIndex = 3;
-            button7.Text = "Randevu";
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.ForeColor = Color.LightGray;
-            label11.Location = new Point(60, 125);
-            label11.Name = "label11";
-            label11.Size = new Size(63, 15);
-            label11.TabIndex = 2;
-            label11.Text = "Kardiyoloji";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label12.ForeColor = Color.White;
-            label12.Location = new Point(35, 105);
-            label12.Name = "label12";
-            label12.Size = new Size(116, 15);
-            label12.TabIndex = 1;
-            label12.Text = "Dr.Davut Efe AYBEY";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(40, 10);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(120, 90);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
             // 
             // panel4
             // 
@@ -496,11 +325,182 @@
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(50, 50, 50);
+            panel3.Controls.Add(button7);
+            panel3.Controls.Add(label11);
+            panel3.Controls.Add(label12);
+            panel3.Controls.Add(pictureBox3);
+            panel3.Location = new Point(490, 15);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(200, 170);
+            panel3.TabIndex = 2;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.FromArgb(0, 120, 215);
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(50, 145);
+            button7.Name = "button7";
+            button7.Size = new Size(100, 25);
+            button7.TabIndex = 3;
+            button7.Text = "Randevu";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.ForeColor = Color.LightGray;
+            label11.Location = new Point(60, 125);
+            label11.Name = "label11";
+            label11.Size = new Size(63, 15);
+            label11.TabIndex = 2;
+            label11.Text = "Kardiyoloji";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(35, 105);
+            label12.Name = "label12";
+            label12.Size = new Size(116, 15);
+            label12.TabIndex = 1;
+            label12.Text = "Dr.Davut Efe AYBEY";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(40, 10);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(120, 90);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(50, 50, 50);
+            panel2.Controls.Add(button6);
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(label10);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Location = new Point(260, 15);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 170);
+            panel2.TabIndex = 1;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(0, 120, 215);
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(50, 145);
+            button6.Name = "button6";
+            button6.Size = new Size(100, 25);
+            button6.TabIndex = 3;
+            button6.Text = "Randevu";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.ForeColor = Color.LightGray;
+            label9.Location = new Point(60, 125);
+            label9.Name = "label9";
+            label9.Size = new Size(63, 15);
+            label9.TabIndex = 2;
+            label9.Text = "Kardiyoloji";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(35, 105);
+            label10.Name = "label10";
+            label10.Size = new Size(116, 15);
+            label10.TabIndex = 1;
+            label10.Text = "Dr.Davut Efe AYBEY";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(40, 10);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(120, 90);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(50, 50, 50);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Location = new Point(30, 15);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 170);
+            panel1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(0, 120, 215);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(50, 145);
+            button5.Name = "button5";
+            button5.Size = new Size(100, 25);
+            button5.TabIndex = 3;
+            button5.Text = "Randevu";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.ForeColor = Color.LightGray;
+            label8.Location = new Point(60, 125);
+            label8.Name = "label8";
+            label8.Size = new Size(63, 15);
+            label8.TabIndex = 2;
+            label8.Text = "Kardiyoloji";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(35, 105);
+            label7.Name = "label7";
+            label7.Size = new Size(116, 15);
+            label7.TabIndex = 1;
+            label7.Text = "Dr.Davut Efe AYBEY";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(40, 10);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(120, 90);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // AnaSayfa2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(30, 30, 30);
+            BackColor = Color.FromArgb(30, 39, 46);
             Controls.Add(panelDoktorlar);
             Controls.Add(label6);
             Controls.Add(panelRandevu);
@@ -517,18 +517,18 @@
             panelRandevu.ResumeLayout(false);
             panelRandevu.PerformLayout();
             panelDoktorlar.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

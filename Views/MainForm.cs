@@ -2,11 +2,22 @@ namespace HastaneRandevuSistemi.Views
 {
     using System.Text.RegularExpressions;
     using HastaneRandevuSistemi.Data;
+    using HastaneRandevuSistemi.Repositories;
     using HastaneRandevuSistemi.Services;
     using MySql.Data.MySqlClient;
 
     public partial class MainForm : Form
     {
+        private MainRepository mainRepository;
+
+        public MainForm()
+        {
+
+            InitializeComponent();
+            mainRepository = new MainRepository();
+
+        }
+
 
         public NavigationService Navigator { get; private set; }
 
@@ -19,12 +30,7 @@ namespace HastaneRandevuSistemi.Views
             panel1.Controls.Add(page);
         }
 
-        public MainForm()
-        {
-
-            InitializeComponent();
-
-        }
+       
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -46,9 +52,13 @@ namespace HastaneRandevuSistemi.Views
         {
             LoginPage girisSayfasi = new LoginPage(this);
 
+            AdminPaneli adminPanel = new AdminPaneli(this, mainRepository);
+
             panel1.Controls.Clear();
 
-            panel1.Controls.Add(girisSayfasi);
+            //panel1.Controls.Add(girisSayfasi);
+
+            panel1.Controls.Add(adminPanel);
 
 
 

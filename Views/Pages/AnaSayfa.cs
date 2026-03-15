@@ -50,8 +50,8 @@ namespace HastaneRandevuSistemi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AdminPaneli adminPage = new AdminPaneli(_mainForm);
-            _mainForm.ShowPage(adminPage);
+            //AdminPaneli adminPage = new AdminPaneli(_mainForm, mainRepository);
+            //_mainForm.ShowPage(adminPage);
         }
     }
 }

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using HastaneRandevuSistemi.Data;
 using HastaneRandevuSistemi.Models;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto;
 
 namespace HastaneRandevuSistemi.Repositories
 {
@@ -41,6 +44,48 @@ namespace HastaneRandevuSistemi.Repositories
 
         }
 
+        public List<Doctor> GetAllDoctors() {
+            List<Doctor> doctors = new List<Doctor>();
+
+            using (MySqlConnection conn = new MySqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                string query = "";
+
+                using (MySqlCommand cmd = new MySqlCommand(@query, conn))
+                {
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Doctor doctor = new Doctor()
+                            {
+                                Id = reader.GetInt32("id"),
+                                FirstName = reader.GetString("first_name"),
+                                LastName = reader.GetString("last_name"),
+                                Gender = reader.GetString("gender"),
+                                BirthDate = reader.GetString("birth_date"),
+                                Specialization = reader.GetString("specialization"),
+                                ExperienceYear = reader.GetString("experience_year"),
+                                Email = reader.GetString("email"),
+                                Phone = reader.GetString("phone"),
+                                Password = reader.GetString("password"),
+                            }; 
+                            doctors.Add(doctor);
+
+                        }
+
+                    }
+
+                }
+                return doctors;
+
+            }
+
+        }
+
         public User Login(string username, string password) 
         {
             using (var conn = new MySqlConnection(_connectionString)) {
@@ -68,6 +113,83 @@ namespace HastaneRandevuSistemi.Repositories
             }
 
             return null;
+        }
+
+        public Doctor LoginDoctor(string email, string password) {
+            using (var conn = new MySqlConnection(_connectionString)) {
+                conn.Open();
+
+                string query = "SELECT email, password FROM doctors WHERE email=@email AND password=@password";
+                using (var cmd = new MySqlCommand(query, conn)) {
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    using (var reader = cmd.ExecuteReader()) {
+                        if (reader.Read()) {
+                            return new Doctor
+                            {
+                                Email = reader.GetString("email"),
+                                Password = reader.GetString("password"),
+                            };
+                        }
+                    }
+
+                }
+            }
+
+            return null;
+        }
+
+        public void AddDoctor(Doctor doctor)
+        {
+            using (var conn = new MySqlConnection(_connectionString)) {
+                conn.Open();
+
+                string query = "INSERT INTO doctors " +
+                    
+                    "(first_name, last_name, gender, birth_date, specialization, experience_year, email, phone, password)" +
+                    "VALUES (@first_name, @last_name, @gender, @birth_date, @specialization, @experience_year, @email, @phone, @password )";
+
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@first_name", doctor.FirstName);
+                    cmd.Parameters.AddWithValue("@last_name", doctor.LastName);
+                    cmd.Parameters.AddWithValue("@gender", doctor.Gender);
+                    cmd.Parameters.AddWithValue("@birth_date", doctor.BirthDate);
+                    cmd.Parameters.AddWithValue("@specialization", doctor.Specialization);
+                    cmd.Parameters.AddWithValue("@experience_year", doctor.ExperienceYear);
+                    cmd.Parameters.AddWithValue("@email", doctor.Email);
+                    cmd.Parameters.AddWithValue("@phone", doctor.Phone);
+                    cmd.Parameters.AddWithValue("@password", doctor.Password);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Yazma başarılı");
+                    }
+                    
+                }
+            }
+        }
+
+        public void Insert(User user) {
+            using (var conn = new MySqlConnection(_connectionString)) {
+                conn.Open();
+
+                string query = @"INSERT INTO users (username, password, role) VALUES (@usernam, @password, @role)";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", user.Username);
+
+                    using (var reader = cmd.ExecuteReader()) {
+                        if (reader.Read()) { 
+                            
+                        }
+                    }
+                }
+
+            }
         }
 
 

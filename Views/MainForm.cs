@@ -39,7 +39,7 @@ namespace HastaneRandevuSistemi.Views
             _controller.GoToLoginPage();
 
 
-            _controller.GoToPage(adminPanel);
+            //_controller.GoToPage(adminPanel);
 
             //_navigationService.Navigate(adminPanel);
 

@@ -7,19 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HastaneRandevuSistemi.Controllers;
 
 namespace HastaneRandevuSistemi.Views.Pages
 {
     public partial class AnaSayfa2 : UserControl
     {
-        public AnaSayfa2()
+        private readonly Controller _controller;
+
+        public AnaSayfa2(Controller controller)
         {
             InitializeComponent();
+            _controller = controller;
         }
 
         private void AnaSayfa2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            _controller.GoToLoginPage();
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            _controller.GoToAdminPage();
         }
     }
 }

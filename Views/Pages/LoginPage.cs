@@ -3,6 +3,7 @@ using HastaneRandevuSistemi.Controllers;
 using HastaneRandevuSistemi.Models;
 using HastaneRandevuSistemi.Repositories;
 using HastaneRandevuSistemi.Views;
+using HastaneRandevuSistemi.Views.Pages;
 
 namespace HastaneRandevuSistemi
 {
@@ -37,8 +38,14 @@ namespace HastaneRandevuSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //_controller.GoToMainPage();
 
-            _controller.Login("kerem", "123");
+            AnaSayfa2 anaSayfa = new AnaSayfa2(_controller);
+
+            _controller.Login(textBox1.Text, textBox2.Text, anaSayfa);
+
+            //ENABLE LATER
+            //_controller.Login("kerem", "123");
 
 
             /*List<User> users = _mainRepository.GetAllUsers();

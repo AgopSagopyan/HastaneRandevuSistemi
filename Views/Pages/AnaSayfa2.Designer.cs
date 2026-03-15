@@ -66,6 +66,8 @@
             label8 = new Label();
             label7 = new Label();
             pictureBox1 = new PictureBox();
+            button9 = new Button();
+            panelUst.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureHastane).BeginInit();
             panelRandevu.SuspendLayout();
             panelDoktorlar.SuspendLayout();
@@ -82,6 +84,7 @@
             // panelUst
             // 
             panelUst.BackColor = Color.FromArgb(45, 45, 45);
+            panelUst.Controls.Add(button9);
             panelUst.Dock = DockStyle.Top;
             panelUst.Location = new Point(0, 0);
             panelUst.Name = "panelUst";
@@ -112,6 +115,7 @@
             button1.TabIndex = 2;
             button1.Text = "Randevularım";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -138,6 +142,7 @@
             button3.TabIndex = 4;
             button3.Text = "Çıkış";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // pictureHastane
             // 
@@ -496,6 +501,21 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // button9
+            // 
+            button9.BackColor = Color.FromArgb(0, 120, 215);
+            button9.FlatAppearance.BorderSize = 0;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(627, 20);
+            button9.Name = "button9";
+            button9.Size = new Size(140, 40);
+            button9.TabIndex = 3;
+            button9.Text = "Admin Paneli";
+            button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
+            // 
             // AnaSayfa2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -513,6 +533,7 @@
             Name = "AnaSayfa2";
             Size = new Size(1200, 700);
             Load += AnaSayfa2_Load;
+            panelUst.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureHastane).EndInit();
             panelRandevu.ResumeLayout(false);
             panelRandevu.PerformLayout();
@@ -572,5 +593,6 @@
         private Label label9;
         private Label label10;
         private PictureBox pictureBox2;
+        private Button button9;
     }
 }

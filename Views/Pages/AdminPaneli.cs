@@ -38,7 +38,7 @@ namespace HastaneRandevuSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminPanelDoctorsTab adminPanelDoctorsTab = new AdminPanelDoctorsTab(_mainRepository);
+            AdminPanelDoctorsTab adminPanelDoctorsTab = new AdminPanelDoctorsTab(_mainRepository, _controller);
 
             panel3.Controls.Clear();
             panel3.Controls.Add(adminPanelDoctorsTab);
@@ -66,7 +66,7 @@ namespace HastaneRandevuSistemi
         {
             // _controller.GoToMainPage();
 
-            AnaSayfa2 anaSayfa = new AnaSayfa2();
+            AnaSayfa2 anaSayfa = new AnaSayfa2(_controller);
 
             _controller.GoToPage(anaSayfa);
         }

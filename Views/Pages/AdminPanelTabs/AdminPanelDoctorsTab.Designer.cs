@@ -170,6 +170,7 @@
             btnDoktorEkle.TabIndex = 11;
             btnDoktorEkle.Text = "Doktor Ekle";
             btnDoktorEkle.UseVisualStyleBackColor = false;
+            btnDoktorEkle.Click += btnDoktorEkle_Click;
             // 
             // label7
             // 

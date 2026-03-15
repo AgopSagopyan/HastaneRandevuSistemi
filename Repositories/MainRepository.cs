@@ -84,7 +84,7 @@ namespace HastaneRandevuSistemi.Repositories
             {
                 conn.Open();
 
-                string query = "";
+                string query = "SELECT * FROM doctors";
 
                 using (MySqlCommand cmd = new MySqlCommand(@query, conn))
                 {
@@ -93,21 +93,38 @@ namespace HastaneRandevuSistemi.Repositories
                     {
                         while (reader.Read())
                         {
-                            Doctor doctor = new Doctor()
-                            {
-                                Id = reader.GetInt32("id"),
-                                FirstName = reader.GetString("first_name"),
-                                LastName = reader.GetString("last_name"),
-                                Gender = reader.GetString("gender"),
-                                BirthDate = reader.GetString("birth_date"),
-                                Specialization = reader.GetString("specialization"),
-                                ExperienceYear = reader.GetString("experience_year"),
-                                Email = reader.GetString("email"),
-                                Phone = reader.GetString("phone"),
-                                Password = reader.GetString("password"),
-                            }; 
-                            doctors.Add(doctor);
+                            try {
+                                Doctor doctor = new Doctor()
+                                {
+                                    Id = reader.GetInt32("id"),
+                                    FirstName = reader.GetString("first_name"),
+                                    LastName = reader.GetString("last_name"),
+                                    Gender = reader.GetString("gender"),
+                                    BirthDate = reader.GetString("birth_date"),
+                                    Specialization = reader.GetString("specialization"),
+                                    ExperienceYear = reader.GetString("experience_year"),
+                                    Email = reader.GetString("email"),
+                                    Phone = reader.GetString("phone"),
+                                    Password = reader.GetString("password"),
 
+                                    /*
+                                    Id = reader.GetInt32("id"),
+                                    FirstName = reader["first_name"]?.ToString(),
+                                    LastName = reader["last_name"]?.ToString(),
+                                    Gender = reader["gender"]?.ToString(),
+                                    BirthDate = reader["birth_date"]?.ToString(),
+                                    Specialization = reader["specialization"]?.ToString(),
+                                    ExperienceYear = reader["experience_year"]?.ToString(),
+                                    Email = reader["email"]?.ToString(),
+                                    Phone = reader["phone"]?.ToString(),
+                                    Password = reader["password"]?.ToString(),
+                                    */
+                                };
+                                doctors.Add(doctor);
+                            }
+                            catch (Exception ex){
+                                MessageBox.Show(ex.Message);
+                            }
                         }
 
                     }

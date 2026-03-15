@@ -8,6 +8,7 @@ using HastaneRandevuSistemi.Repositories;
 using HastaneRandevuSistemi.Services;
 using HastaneRandevuSistemi.Views;
 using HastaneRandevuSistemi.Views.Pages;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 
 namespace HastaneRandevuSistemi.Controllers
 {
@@ -18,6 +19,8 @@ namespace HastaneRandevuSistemi.Controllers
         private readonly MainForm _mainForm;
 
         private readonly MainRepository _mainRepository;
+
+
 
 
         public Controller(NavigationService navigationService, MainForm mainForm, MainRepository mainRepository) {
@@ -33,7 +36,7 @@ namespace HastaneRandevuSistemi.Controllers
         }
 
         public void GoToMainPage() { 
-            AnaSayfa2 anaSayfa2 = new AnaSayfa2();
+            AnaSayfa2 anaSayfa2 = new AnaSayfa2(this);
             _navigationService.Navigate(anaSayfa2);
         }
 
@@ -47,15 +50,42 @@ namespace HastaneRandevuSistemi.Controllers
             _navigationService.Navigate(page);
         }
 
-        public void Login(string username, string password)
+        public void Login(string username, string password, UserControl page)
         {
 
             User user = _mainRepository.Login(username, password);
 
-            if (user != null) {
-                MessageBox.Show("Nigga");
+            if (user != null)
+            {
+                _navigationService.Navigate(page);
+            }
+            else {
+                MessageBox.Show("Başarısız");
             }
 
+        }
+
+        public void AddDoctor(string first_name, string last_name, string gender, string birth_date, string specialization, string experience_year, string email, string phone, string password)
+        {
+
+            Doctor doctor = new Doctor
+            {
+                FirstName = first_name,
+                LastName = last_name,
+                Gender = gender,
+                BirthDate = birth_date,
+                Specialization = specialization,
+                ExperienceYear = experience_year,
+                Email = email,
+                Phone = phone,
+                Password = password
+            };
+                
+            _mainRepository.AddDoctor(doctor);
+        }
+
+        public List<Doctor> GetDoctors() {
+            return _mainRepository.GetAllDoctors();
         }
     }
 }

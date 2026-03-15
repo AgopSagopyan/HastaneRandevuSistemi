@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using HastaneRandevuSistemi.Controllers;
 using HastaneRandevuSistemi.Repositories;
 using HastaneRandevuSistemi.Views;
+using HastaneRandevuSistemi.Views.Pages;
 using HastaneRandevuSistemi.Views.Pages.AdminTabs;
 
 namespace HastaneRandevuSistemi
@@ -63,7 +64,11 @@ namespace HastaneRandevuSistemi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            _controller.GoToMainPage();
+            // _controller.GoToMainPage();
+
+            AnaSayfa2 anaSayfa = new AnaSayfa2();
+
+            _controller.GoToPage(anaSayfa);
         }
     }
 }

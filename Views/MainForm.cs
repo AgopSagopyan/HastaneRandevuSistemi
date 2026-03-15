@@ -32,11 +32,14 @@ namespace HastaneRandevuSistemi.Views
         {
 
 
-            //AdminPaneli adminPanel = new AdminPaneli(this, _mainRepository, _controller);
+            AdminPaneli adminPanel = new AdminPaneli(this, _mainRepository, _controller);
 
             //_controller.GoToAdminPage();
 
             _controller.GoToLoginPage();
+
+
+            _controller.GoToPage(adminPanel);
 
             //_navigationService.Navigate(adminPanel);
 

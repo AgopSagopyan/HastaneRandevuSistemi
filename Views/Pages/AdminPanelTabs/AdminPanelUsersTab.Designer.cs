@@ -166,7 +166,7 @@
             label4.TabIndex = 18;
             label4.Text = "Hasta Adı";
             // 
-            // AdminUsersTab
+            // AdminPanelUsersTab
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -182,7 +182,7 @@
             Controls.Add(textBox1);
             Controls.Add(btnDoktorSil);
             Controls.Add(label4);
-            Name = "AdminUsersTab";
+            Name = "AdminPanelUsersTab";
             Size = new Size(1077, 676);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

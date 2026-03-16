@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HastaneRandevuSistemi.Controllers;
 using HastaneRandevuSistemi.Models;
 using HastaneRandevuSistemi.Repositories;
 
@@ -16,15 +17,19 @@ namespace HastaneRandevuSistemi.Views.Pages.AdminTabs
     {
         private readonly MainRepository _mainRepository;
 
-        public AdminPanelUsersTab(MainRepository mainRepository)
+        private readonly Controller _controller;
+
+        public AdminPanelUsersTab(MainRepository mainRepository, Controller controller)
         {
             InitializeComponent();
             _mainRepository = mainRepository;
+            _controller = controller;
         }
 
         private void btnDoktorEkle_Click(object sender, EventArgs e)
         {
-            Doctor doctor = new Doctor {
+            Doctor doctor = new Doctor
+            {
                 FirstName = "Nigga",
                 LastName = "Zenci",
                 Gender = "Erkek",
@@ -37,6 +42,16 @@ namespace HastaneRandevuSistemi.Views.Pages.AdminTabs
             };
 
             _mainRepository.AddDoctor(doctor);
+        }
+
+        private void AdminPanelUsersTab_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = _controller.GetUsers();
+        }
+
+        private void btnHastaEkle_Click(object sender, EventArgs e)
+        {
+            _controller.AddUser(txtDoktor.Text, textBox1.Text, checkBox1.Checked);
         }
     }
 }

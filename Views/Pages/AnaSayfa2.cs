@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HastaneRandevuSistemi.Controllers;
+using HastaneRandevuSistemi.Views.Pages.AdminPanelTabs;
 
 namespace HastaneRandevuSistemi.Views.Pages
 {
@@ -39,6 +40,13 @@ namespace HastaneRandevuSistemi.Views.Pages
         private void button9_Click(object sender, EventArgs e)
         {
             _controller.GoToAdminPage();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DoktorProfil doktorProfil = new DoktorProfil(_controller);
+
+            _controller.GoToPage(doktorProfil);
         }
     }
 }

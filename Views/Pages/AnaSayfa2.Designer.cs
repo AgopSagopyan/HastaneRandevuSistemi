@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa2));
             panelUst = new Panel();
+            button9 = new Button();
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
@@ -66,7 +67,6 @@
             label8 = new Label();
             label7 = new Label();
             pictureBox1 = new PictureBox();
-            button9 = new Button();
             panelUst.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureHastane).BeginInit();
             panelRandevu.SuspendLayout();
@@ -90,6 +90,21 @@
             panelUst.Name = "panelUst";
             panelUst.Size = new Size(1200, 80);
             panelUst.TabIndex = 0;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.FromArgb(0, 120, 215);
+            button9.FlatAppearance.BorderSize = 0;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(627, 20);
+            button9.Name = "button9";
+            button9.Size = new Size(140, 40);
+            button9.TabIndex = 3;
+            button9.Text = "Admin Paneli";
+            button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // label1
             // 
@@ -129,6 +144,7 @@
             button2.TabIndex = 3;
             button2.Text = "Profil";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -500,21 +516,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.FromArgb(0, 120, 215);
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(627, 20);
-            button9.Name = "button9";
-            button9.Size = new Size(140, 40);
-            button9.TabIndex = 3;
-            button9.Text = "Admin Paneli";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
             // 
             // AnaSayfa2
             // 

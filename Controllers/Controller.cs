@@ -55,14 +55,32 @@ namespace HastaneRandevuSistemi.Controllers
 
             User user = _mainRepository.Login(username, password);
 
+            AdminPaneli adminPaneli = new AdminPaneli(_mainForm, _mainRepository, this);
+            
+
             if (user != null)
             {
-                _navigationService.Navigate(page);
+                if (user.IsAdmin)
+                {
+                    _navigationService.Navigate(adminPaneli);
+
+                }
+                else {
+                    _navigationService.Navigate(page);
+                    
+                }
+
+
+
             }
             else {
                 MessageBox.Show("Başarısız");
             }
 
+        }
+
+        public void AdminLogin(string username, string password, UserControl page) { 
+            
         }
 
         public void AddDoctor(string first_name, string last_name, string gender, string birth_date, string specialization, string experience_year, string email, string phone, string password)
@@ -84,8 +102,22 @@ namespace HastaneRandevuSistemi.Controllers
             _mainRepository.AddDoctor(doctor);
         }
 
+        public void AddUser(string username, string password, bool isAdmin) {
+            User user = new User { 
+                Username = username,
+                Password = password,
+                IsAdmin = isAdmin
+            };
+
+            _mainRepository.AddUser(user);
+        }
+
         public List<Doctor> GetDoctors() {
             return _mainRepository.GetAllDoctors();
+        }
+
+        public List<User> GetUsers() { 
+            return _mainRepository.GetAllUsers(); 
         }
     }
 }

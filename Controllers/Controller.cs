@@ -43,6 +43,10 @@ namespace HastaneRandevuSistemi.Controllers
             _navigationService.Navigate(loginPage);
         }
 
+        public void GoToPage(UserControl page) {
+            _navigationService.Navigate(page);
+        }
+
         public void Login(string username, string password)
         {
 

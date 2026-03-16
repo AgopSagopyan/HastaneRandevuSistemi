@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing.Text;
 using System.Linq;
+using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,7 +52,7 @@ namespace HastaneRandevuSistemi.Repositories
             {
                 conn.Open();
 
-                string query = "SELECT id, username, password FROM users WHERE username=@username AND password=@password";
+                string query = "SELECT id, username, password, isAdmin FROM users WHERE username=@username AND password=@password";
                 using (var cmd = new MySqlCommand(query, conn))
                 {
 
@@ -67,6 +68,8 @@ namespace HastaneRandevuSistemi.Repositories
                                 Id = reader.GetInt32("id"),
                                 Username = reader.GetString("username"),
                                 Password = reader.GetString("password"),
+                                IsAdmin = reader.GetBoolean("isAdmin")
+                                
 
                             };
                         }
@@ -192,6 +195,31 @@ namespace HastaneRandevuSistemi.Repositories
                         MessageBox.Show("Yazma başarılı");
                     }
                     
+                }
+            }
+        }
+
+        public void AddUser(User user) {
+            using (var conn = new MySqlConnection(_connectionString))
+            {
+                conn.Open();
+
+                string query = "INSERT INTO users (username, password, isAdmin) VALUES (@username, @password, @isAdmin)";
+
+
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", user.Username);
+                    cmd.Parameters.AddWithValue("@password", user.Password);
+                    cmd.Parameters.AddWithValue("@isAdmin", user.IsAdmin);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Yazma başarılı");
+                    }
+
                 }
             }
         }

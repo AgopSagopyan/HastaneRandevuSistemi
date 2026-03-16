@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            btnRandevuİptal = new Button();
             label2 = new Label();
-            label5 = new Label();
             label1 = new Label();
             txtDoktor = new TextBox();
             btnHastaEkle = new Button();
@@ -39,68 +37,45 @@
             textBox1 = new TextBox();
             btnDoktorSil = new Button();
             label4 = new Label();
+            label3 = new Label();
+            checkBox1 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(471, 367);
+            dataGridView1.Location = new Point(142, 287);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(464, 217);
+            dataGridView1.Size = new Size(717, 217);
             dataGridView1.TabIndex = 22;
-            // 
-            // btnRandevuİptal
-            // 
-            btnRandevuİptal.BackColor = Color.FromArgb(200, 60, 60);
-            btnRandevuİptal.FlatAppearance.BorderSize = 0;
-            btnRandevuİptal.FlatStyle = FlatStyle.Flat;
-            btnRandevuİptal.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            btnRandevuİptal.ForeColor = Color.White;
-            btnRandevuİptal.Location = new Point(215, 427);
-            btnRandevuİptal.Name = "btnRandevuİptal";
-            btnRandevuİptal.Size = new Size(150, 40);
-            btnRandevuİptal.TabIndex = 23;
-            btnRandevuİptal.Text = "Randevu İptal";
-            btnRandevuİptal.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(142, 93);
+            label2.Location = new Point(142, 24);
             label2.Name = "label2";
             label2.Size = new Size(166, 25);
             label2.TabIndex = 15;
             label2.Text = "Kullanıcı İşlemleri";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(142, 333);
-            label5.Name = "label5";
-            label5.Size = new Size(113, 25);
-            label5.TabIndex = 21;
-            label5.Text = "Randevular";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(142, 143);
+            label1.Location = new Point(142, 69);
             label1.Name = "label1";
-            label1.Size = new Size(71, 17);
+            label1.Size = new Size(78, 17);
             label1.TabIndex = 13;
-            label1.Text = "Doktor Adı";
+            label1.Text = "Kullanıcı Adı";
             // 
             // txtDoktor
             // 
             txtDoktor.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            txtDoktor.Location = new Point(262, 138);
+            txtDoktor.Location = new Point(236, 69);
             txtDoktor.Name = "txtDoktor";
             txtDoktor.Size = new Size(200, 25);
             txtDoktor.TabIndex = 14;
@@ -111,12 +86,13 @@
             btnHastaEkle.FlatAppearance.BorderSize = 0;
             btnHastaEkle.FlatStyle = FlatStyle.Flat;
             btnHastaEkle.ForeColor = Color.White;
-            btnHastaEkle.Location = new Point(482, 256);
+            btnHastaEkle.Location = new Point(236, 204);
             btnHastaEkle.Name = "btnHastaEkle";
             btnHastaEkle.Size = new Size(120, 35);
             btnHastaEkle.TabIndex = 20;
-            btnHastaEkle.Text = "Hasta Ekle";
+            btnHastaEkle.Text = "Kullanıcı Ekle";
             btnHastaEkle.UseVisualStyleBackColor = false;
+            btnHastaEkle.Click += btnHastaEkle_Click;
             // 
             // btnDoktorEkle
             // 
@@ -125,7 +101,7 @@
             btnDoktorEkle.FlatStyle = FlatStyle.Flat;
             btnDoktorEkle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
             btnDoktorEkle.ForeColor = Color.White;
-            btnDoktorEkle.Location = new Point(482, 136);
+            btnDoktorEkle.Location = new Point(898, 182);
             btnDoktorEkle.Name = "btnDoktorEkle";
             btnDoktorEkle.Size = new Size(120, 35);
             btnDoktorEkle.TabIndex = 16;
@@ -136,7 +112,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox1.Location = new Point(262, 258);
+            textBox1.Location = new Point(236, 124);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(200, 25);
             textBox1.TabIndex = 19;
@@ -148,7 +124,7 @@
             btnDoktorSil.FlatStyle = FlatStyle.Flat;
             btnDoktorSil.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
             btnDoktorSil.ForeColor = Color.White;
-            btnDoktorSil.Location = new Point(622, 136);
+            btnDoktorSil.Location = new Point(898, 245);
             btnDoktorSil.Name = "btnDoktorSil";
             btnDoktorSil.Size = new Size(120, 35);
             btnDoktorSil.TabIndex = 17;
@@ -160,21 +136,42 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(142, 263);
+            label4.Location = new Point(142, 124);
             label4.Name = "label4";
-            label4.Size = new Size(64, 17);
+            label4.Size = new Size(85, 17);
             label4.TabIndex = 18;
-            label4.Text = "Hasta Adı";
+            label4.Text = "Kullanıcı Şifre";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(257, 179);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 17);
+            label3.TabIndex = 23;
+            label3.Text = "Adminlik";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(320, 182);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(15, 14);
+            checkBox1.TabIndex = 24;
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // AdminPanelUsersTab
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 39, 46);
+            Controls.Add(checkBox1);
+            Controls.Add(label3);
             Controls.Add(dataGridView1);
-            Controls.Add(btnRandevuİptal);
             Controls.Add(label2);
-            Controls.Add(label5);
             Controls.Add(label1);
             Controls.Add(txtDoktor);
             Controls.Add(btnHastaEkle);
@@ -184,6 +181,7 @@
             Controls.Add(label4);
             Name = "AdminPanelUsersTab";
             Size = new Size(1077, 676);
+            Load += AdminPanelUsersTab_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -192,9 +190,7 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button btnRandevuİptal;
         private Label label2;
-        private Label label5;
         private Label label1;
         private TextBox txtDoktor;
         private Button btnHastaEkle;
@@ -202,5 +198,7 @@
         private TextBox textBox1;
         private Button btnDoktorSil;
         private Label label4;
+        private Label label3;
+        private CheckBox checkBox1;
     }
 }

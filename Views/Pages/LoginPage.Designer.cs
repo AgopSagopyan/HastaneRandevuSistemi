@@ -34,10 +34,8 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
             panel1 = new Panel();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,7 +87,6 @@
             // 
             textBox1.Location = new Point(80, 158);
             textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '*';
             textBox1.Size = new Size(250, 23);
             textBox1.TabIndex = 8;
             // 
@@ -103,15 +100,6 @@
             label2.TabIndex = 7;
             label2.Text = "Kullanıcı Adı";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(440, 523);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(418, 150);
-            dataGridView1.TabIndex = 13;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
@@ -121,7 +109,7 @@
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(textBox2);
-            panel1.Location = new Point(440, 99);
+            panel1.Location = new Point(440, 159);
             panel1.Name = "panel1";
             panel1.Size = new Size(418, 400);
             panel1.TabIndex = 14;
@@ -133,11 +121,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 39, 46);
             Controls.Add(panel1);
-            Controls.Add(dataGridView1);
             Name = "LoginPage";
             Size = new Size(1280, 720);
             Load += UserControl1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -150,7 +136,6 @@
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label2;
-        private DataGridView dataGridView1;
         private Panel panel1;
     }
 }

@@ -51,7 +51,7 @@ namespace HastaneRandevuSistemi
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AdminPanelUsersTab adminUsersTab = new AdminPanelUsersTab(_mainRepository);
+            AdminPanelUsersTab adminUsersTab = new AdminPanelUsersTab(_mainRepository, _controller);
 
             panel3.Controls.Clear();
             panel3.Controls.Add(adminUsersTab);
@@ -69,6 +69,16 @@ namespace HastaneRandevuSistemi
             AnaSayfa2 anaSayfa = new AnaSayfa2(_controller);
 
             _controller.GoToPage(anaSayfa);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

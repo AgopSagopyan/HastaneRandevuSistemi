@@ -19,6 +19,9 @@
     <Compile Update="Views\Pages\AdminPanelTabs\AdminPanelUsersTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Pages\AdminPanelTabs\DoktorProfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Pages\AnaSayfa2.cs">
       <SubType>UserControl</SubType>
     </Compile>

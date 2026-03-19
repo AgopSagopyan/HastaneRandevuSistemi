@@ -111,11 +111,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-<<<<<<< Updated upstream
             label1.Location = new Point(20, 22);
-=======
-            label1.Location = new Point(10, 19);
->>>>>>> Stashed changes
             label1.Name = "label1";
             label1.Size = new Size(302, 32);
             label1.TabIndex = 1;

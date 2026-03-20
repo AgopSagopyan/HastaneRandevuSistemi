@@ -1,3 +1,9 @@
+using System.Drawing.Text;
+using HastaneRandevuSistemi.Controllers;
+using HastaneRandevuSistemi.Repositories;
+using HastaneRandevuSistemi.Services;
+using HastaneRandevuSistemi.Views.Pages;
+
 namespace HastaneRandevuSistemi.Views
 {
     internal static class Program
@@ -12,10 +18,9 @@ namespace HastaneRandevuSistemi.Views
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            
+
+
             ApplicationConfiguration.Initialize();
-
-
             Application.Run(new MainForm());
         }
     }

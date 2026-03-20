@@ -16,17 +16,19 @@ namespace HastaneRandevuSistemi.Controllers
     {
         private readonly NavigationService _navigationService;
 
-        private readonly MainForm _mainForm;
 
         private readonly MainRepository _mainRepository;
 
 
 
 
-        public Controller(NavigationService navigationService, MainForm mainForm, MainRepository mainRepository) {
+        public Controller(NavigationService navigationService, MainRepository mainRepository) {
             _navigationService = navigationService;
-            _mainForm = mainForm;
             _mainRepository = mainRepository;
+        }
+
+        public void GoToPage(UserControl page) {
+            _navigationService.Navigate(page);
         }
 
         public void GoToAdminPage() {
@@ -42,20 +44,17 @@ namespace HastaneRandevuSistemi.Controllers
 
         public void GoToLoginPage()
         {
-            LoginPage loginPage = new LoginPage(_mainForm, this);
+            LoginPage loginPage = new LoginPage(null, this);
             _navigationService.Navigate(loginPage);
         }
 
-        public void GoToPage(UserControl page) {
-            _navigationService.Navigate(page);
-        }
 
         public void Login(string username, string password, UserControl page)
         {
 
             User user = _mainRepository.Login(username, password);
 
-            AdminPaneli adminPaneli = new AdminPaneli(_mainForm, _mainRepository, this);
+            AdminPaneli adminPaneli = new AdminPaneli(null, _mainRepository, this);
             
 
             if (user != null)

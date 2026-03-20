@@ -36,6 +36,7 @@
             label2 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
+            label7 = new Label();
             button3 = new Button();
             label6 = new Label();
             button2 = new Button();
@@ -43,7 +44,6 @@
             label4 = new Label();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
-            label7 = new Label();
             label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -141,6 +141,17 @@
             panel2.Size = new Size(797, 306);
             panel2.TabIndex = 15;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 20F);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(218, 28);
+            label7.Name = "label7";
+            label7.Size = new Size(315, 37);
+            label7.TabIndex = 7;
+            label7.Text = "Hastane Randevu Sistemi";
+            // 
             // button3
             // 
             button3.Location = new Point(506, 187);
@@ -203,17 +214,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(258, 23);
             textBox3.TabIndex = 0;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 20F);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(218, 28);
-            label7.Name = "label7";
-            label7.Size = new Size(315, 37);
-            label7.TabIndex = 7;
-            label7.Text = "Hastane Randevu Sistemi";
             // 
             // LoginPage
             // 

@@ -5,25 +5,29 @@ namespace HastaneRandevuSistemi.Views
     using HastaneRandevuSistemi.Data;
     using HastaneRandevuSistemi.Repositories;
     using HastaneRandevuSistemi.Services;
+    using HastaneRandevuSistemi.Views.Pages;
     using MySql.Data.MySqlClient;
     using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
     public partial class MainForm : Form
     {
-        private MainRepository _mainRepository;
+        private readonly NavigationService _navigationService;
+        private readonly Controller _controller;
+        private readonly MainRepository _mainRepository;
 
-        private NavigationService _navigationService;
-
-        private Controller _controller;
-
+        private readonly MainServices _mainServices;
 
         public MainForm()
         {
-
             InitializeComponent();
-            _mainRepository = new MainRepository();
+
             _navigationService = new NavigationService(panel1);
-            _controller = new Controller(_navigationService, this, _mainRepository);
+
+            _mainServices = new MainServices();
+
+            _mainRepository = new MainRepository();
+
+            _controller = new Controller(_navigationService, _mainRepository);
         }
 
 
@@ -31,64 +35,8 @@ namespace HastaneRandevuSistemi.Views
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            _controller.GoToPage(new SignUp(_mainRepository, _mainServices));
 
-            AdminPaneli adminPanel = new AdminPaneli(this, _mainRepository, _controller);
-
-            //_controller.GoToAdminPage();
-
-            _controller.GoToLoginPage();
-
-
-            //_controller.GoToPage(adminPanel);
-
-            //_navigationService.Navigate(adminPanel);
-
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            // int result = DatabaseHelper.ExecuteQuery("SHOW DATABASES;");
-
-
-            //MessageBox.Show(result.ToString());
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
         }
 
     }

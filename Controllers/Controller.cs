@@ -19,12 +19,15 @@ namespace HastaneRandevuSistemi.Controllers
 
         private readonly MainRepository _mainRepository;
 
+        private readonly MainServices _mainServices;
 
 
 
-        public Controller(NavigationService navigationService, MainRepository mainRepository) {
+
+        public Controller(NavigationService navigationService, MainRepository mainRepository, MainServices mainServices) {
             _navigationService = navigationService;
             _mainRepository = mainRepository;
+            _mainServices = mainServices;
         }
 
         public void GoToPage(UserControl page) {
@@ -46,6 +49,11 @@ namespace HastaneRandevuSistemi.Controllers
         {
             LoginPage loginPage = new LoginPage(null, this);
             _navigationService.Navigate(loginPage);
+        }
+
+        public void GoToSignUpPage() {
+            SignUp signUpPage = new SignUp(_mainRepository, _mainServices);
+            _navigationService.Navigate(signUpPage);
         }
 
 

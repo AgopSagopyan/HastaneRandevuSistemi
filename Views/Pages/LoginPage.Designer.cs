@@ -44,6 +44,7 @@
             label4 = new Label();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
+            button4 = new Button();
             label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -55,7 +56,7 @@
             label1.FlatStyle = FlatStyle.System;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(184, 18);
+            label1.Location = new Point(108, 19);
             label1.Name = "label1";
             label1.Size = new Size(70, 37);
             label1.TabIndex = 6;
@@ -215,11 +216,22 @@
             textBox3.Size = new Size(258, 23);
             textBox3.TabIndex = 0;
             // 
+            // button4
+            // 
+            button4.Location = new Point(925, 506);
+            button4.Name = "button4";
+            button4.Size = new Size(167, 41);
+            button4.TabIndex = 16;
+            button4.Text = "Kayıt Ol";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 39, 46);
+            Controls.Add(button4);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "LoginPage";
@@ -249,5 +261,6 @@
         private Label label5;
         private Button button3;
         private Label label7;
+        private Button button4;
     }
 }

@@ -27,15 +27,16 @@ namespace HastaneRandevuSistemi.Views
 
             _mainRepository = new MainRepository();
 
-            _controller = new Controller(_navigationService, _mainRepository);
+            _controller = new Controller(_navigationService, _mainRepository, _mainServices);
         }
 
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //_controller.GoToPage(new SignUp(_mainRepository, _mainServices));
 
-            _controller.GoToPage(new SignUp(_mainRepository, _mainServices));
+            _controller.GoToLoginPage();
 
         }
 

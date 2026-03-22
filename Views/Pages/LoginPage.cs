@@ -119,6 +119,11 @@ namespace HastaneRandevuSistemi
                 label6.ForeColor = Color.Red;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _controller.GoToSignUpPage();
+        }
     }
 }
 

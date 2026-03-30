@@ -52,7 +52,7 @@ namespace HastaneRandevuSistemi.Controllers
         }
 
         public void GoToSignUpPage() {
-            SignUp signUpPage = new SignUp(_mainRepository, _mainServices);
+            SignUp signUpPage = new SignUp(_mainRepository, _mainServices, this);
             _navigationService.Navigate(signUpPage);
         }
 

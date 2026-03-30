@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             username_textBox = new TextBox();
             email_textBox = new TextBox();
             password_textBox = new TextBox();
@@ -40,6 +39,7 @@
             label4 = new Label();
             code_button = new Button();
             panel1 = new Panel();
+            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             signUp_button.Name = "signUp_button";
             signUp_button.Size = new Size(124, 30);
             signUp_button.TabIndex = 3;
-            signUp_button.Text = "Kayit Ol";
+            signUp_button.Text = "Kod Gonder";
             signUp_button.UseVisualStyleBackColor = true;
             signUp_button.Click += signUp_button_Click;
             // 
@@ -138,13 +138,13 @@
             code_button.Name = "code_button";
             code_button.Size = new Size(124, 30);
             code_button.TabIndex = 9;
-            code_button.Text = "Onayla";
+            code_button.Text = "Kaydol";
             code_button.UseVisualStyleBackColor = true;
             code_button.Click += button1_Click;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(39, 48, 49);
+            panel1.BackColor = Color.FromArgb(45, 45, 45);
             panel1.Controls.Add(password_textBox);
             panel1.Controls.Add(signUp_button);
             panel1.Controls.Add(code_button);
@@ -155,20 +155,35 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(username_textBox);
-            panel1.Location = new Point(543, 172);
+            panel1.Location = new Point(444, 136);
             panel1.Name = "panel1";
             panel1.Size = new Size(417, 478);
             panel1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(45, 45, 45);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(19, 16);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 30);
+            button1.TabIndex = 10;
+            button1.Text = "Geri";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = Color.FromArgb(30, 39, 46);
             BackgroundImageLayout = ImageLayout.Stretch;
+            Controls.Add(button1);
             Controls.Add(panel1);
             Name = "SignUp";
-            Size = new Size(1486, 720);
+            Size = new Size(1280, 720);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -187,5 +202,6 @@
         private Label label4;
         private Button code_button;
         private Panel panel1;
+        private Button button1;
     }
 }

@@ -38,6 +38,8 @@ namespace HastaneRandevuSistemi.Views
 
             _controller.GoToLoginPage();
 
+            //_controller.GoToSignUpPage();
+
         }
 
     }

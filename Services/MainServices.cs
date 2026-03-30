@@ -10,7 +10,7 @@ namespace HastaneRandevuSistemi.Services
 {
     public class MainServices
     {
-        public void SendEmail(string recieverEmail)
+        public String SendEmail(string recieverEmail)
         {
             try
             {
@@ -32,11 +32,15 @@ namespace HastaneRandevuSistemi.Services
                 client.Send(msj);
 
                 MessageBox.Show("Güvenlik Kodu Gönderildi");
+
+                return confirmationCode.ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return null;
             }
+
         }
     }
      

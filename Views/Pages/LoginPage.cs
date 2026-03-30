@@ -82,42 +82,14 @@ namespace HastaneRandevuSistemi
 
         }
 
-        int sayı;
-        Random rnd = new Random();
         private void button2_Click(object sender, EventArgs e)
         {
-            sayı = rnd.Next(100000, 999999);
-            MailMessage msj = new MailMessage();
-            SmtpClient client = new SmtpClient();
-
-            client.Credentials = new System.Net.NetworkCredential("aybeydavutefe@gmail.com", "jspp odhm pbhw pewc");
-            client.Port = 587;
-            client.Host = "smtp.gmail.com";
-            client.EnableSsl = true;
-
-            msj.To.Add(textBox4.Text);
-            msj.From = new MailAddress("aybeydavutefe@gmail.com", "jspp odhm pbhw pewc");
-            msj.Subject = "Güvenlik Kodu";
-            msj.Body = sayı.ToString();
-
-            client.Send(msj);
-
-            MessageBox.Show("Güvenlik Kodu Gönderildi");
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == sayı.ToString())
-            {
-                label6.Text = "Güvenlik Kodu Doğru";
-                label6.ForeColor = Color.Green;
-            }
-            else
-            {
-                label6.Text = "Güvenlik Kodu Yanlış";
-                label6.ForeColor = Color.Red;
-            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)

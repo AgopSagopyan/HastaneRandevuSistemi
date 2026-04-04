@@ -43,6 +43,9 @@
     <Compile Update="Views\Pages\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Pages\Verification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Pages\Yorum.cs">
       <SubType>Form</SubType>
     </Compile>

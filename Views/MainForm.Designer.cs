@@ -35,7 +35,7 @@ partial class MainForm
         // 
         panel1.Location = new Point(1, 0);
         panel1.Name = "panel1";
-        panel1.Size = new Size(1264, 720);
+        panel1.Size = new Size(1280, 720);
         panel1.TabIndex = 0;
         // 
         // MainForm
@@ -43,10 +43,10 @@ partial class MainForm
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(30, 39, 46);
-        ClientSize = new Size(1264, 721);
+        ClientSize = new Size(1284, 721);
         Controls.Add(panel1);
-        MaximumSize = new Size(1280, 760);
-        MinimumSize = new Size(1280, 760);
+        MaximumSize = new Size(1300, 760);
+        MinimumSize = new Size(1300, 760);
         Name = "MainForm";
         Text = "Form1";
         Load += Form1_Load;

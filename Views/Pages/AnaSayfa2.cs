@@ -15,16 +15,24 @@ namespace HastaneRandevuSistemi.Views.Pages
     public partial class AnaSayfa2 : UserControl
     {
         private readonly Controller _controller;
+        private bool _isAdmin;
 
-        public AnaSayfa2(Controller controller)
+        public AnaSayfa2(Controller controller, bool isAdmin)
         {
             InitializeComponent();
             _controller = controller;
+            _isAdmin = isAdmin;
+
         }
 
         private void AnaSayfa2_Load(object sender, EventArgs e)
         {
-
+            if (_isAdmin) {
+                button9.Visible = true;
+            } else
+            {
+                button9.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

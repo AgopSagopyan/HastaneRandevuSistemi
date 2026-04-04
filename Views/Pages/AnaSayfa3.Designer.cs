@@ -133,7 +133,7 @@
             panelUst.Dock = DockStyle.Top;
             panelUst.Location = new Point(0, 0);
             panelUst.Name = "panelUst";
-            panelUst.Size = new Size(1200, 73);
+            panelUst.Size = new Size(1280, 73);
             panelUst.TabIndex = 0;
             // 
             // button10
@@ -881,7 +881,7 @@
             Controls.Add(panelRandevu);
             Controls.Add(panelUst);
             Name = "AnaSayfa3";
-            Size = new Size(1200, 712);
+            Size = new Size(1280, 720);
             Load += AnaSayfa2_Load;
             panelUst.ResumeLayout(false);
             panelUst.PerformLayout();

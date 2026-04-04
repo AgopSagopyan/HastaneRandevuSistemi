@@ -41,7 +41,7 @@ namespace HastaneRandevuSistemi
         {
             //_controller.GoToMainPage();
 
-            AnaSayfa2 anaSayfa = new AnaSayfa2(_controller);
+            AnaSayfa2 anaSayfa = new AnaSayfa2(_controller, false);
 
             _controller.Login(textBox1.Text, textBox2.Text, anaSayfa);
 
@@ -93,6 +93,11 @@ namespace HastaneRandevuSistemi
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+            _controller.GoToSignUpPage();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             _controller.GoToSignUpPage();
         }

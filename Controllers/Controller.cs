@@ -41,7 +41,7 @@ namespace HastaneRandevuSistemi.Controllers
         }
 
         public void GoToMainPage() { 
-            AnaSayfa2 anaSayfa2 = new AnaSayfa2(this);
+            AnaSayfa2 anaSayfa2 = new AnaSayfa2(this, false);
             _navigationService.Navigate(anaSayfa2);
         }
 

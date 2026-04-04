@@ -66,7 +66,7 @@ namespace HastaneRandevuSistemi
         {
             // _controller.GoToMainPage();
 
-            AnaSayfa2 anaSayfa = new AnaSayfa2(_controller);
+            AnaSayfa2 anaSayfa = new AnaSayfa2(_controller, false);
 
             _controller.GoToPage(anaSayfa);
         }
